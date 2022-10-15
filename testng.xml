@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test name="Booking Test" parallel="methods">
+        <parameter name="browserType" value="chrome"/>
+        <classes>
+            <class name="Runner.testRunner"/>
+        </classes>
+    </test> <!-- Automation_HRM -->
+</suite> <!-- Default Suite -->
