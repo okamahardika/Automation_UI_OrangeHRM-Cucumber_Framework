@@ -25,6 +25,9 @@
                         <name>dataproviderthreadcount</name>
                         <value>3</value>
                     </properties>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>Automation_HRM\testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
     <plugin>
