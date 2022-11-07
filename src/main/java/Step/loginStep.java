@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
+import seleniumHelper.SeleniumHelper;
 
 public class loginStep {
 
@@ -21,9 +22,14 @@ public class loginStep {
     }
 
     @Given("User input data username {string} and {string}")
-    public void user_input_data_username_and(String username, String password) throws InterruptedException {
+    public void user_input_data_username_and(String username, String password) {
         // Write code here that turns the phrase above into concrete actions
-        login.Login(username, password);
+        try {
+            login.Login(username, password);
+            System.out.println(" user success to input username : " + username + " and password : " + password);
+        }catch (Exception e) {
+            System.out.println("error input username and password");
+        }
     }
 
     @When("User click button login")
