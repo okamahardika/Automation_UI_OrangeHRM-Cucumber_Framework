@@ -6,6 +6,8 @@ import factories.DriverFactory;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -34,7 +36,7 @@ public class testRunner extends AbstractTestNGCucumberTests {
     public void setupBrowser(String chrome) {
         BrowserFactory bf = new BrowserFactory();
 
-        DriverFactory.getInstance().setDriver(bf.launchBrowser(chrome));
+        DriverFactory.getInstance().setDriver(bf.launchBrowser("headless chrome"));
         WebDriver webDriver = DriverFactory.getInstance().getDriver();
         webDriver.manage().window().maximize();
     }
